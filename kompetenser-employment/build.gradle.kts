@@ -17,8 +17,8 @@ repositories {
 val vertxVersion = "4.0.3"
 val junitJupiterVersion = "5.7.0"
 
-val mainVerticleName = "se.kompetenser.competence.MainVerticle"
-val launcherClassName = "io.vertx.core.Launcher"
+val mainVerticleName = "se.kompetenser.employment.MainVerticle"
+val launcherClassName = "se.kompetenser.Application"
 
 val watchForChange = "src/**/*"
 val doOnChange = "${projectDir}/gradlew classes"
