@@ -8,6 +8,12 @@ import io.vertx.micrometer.VertxJmxMetricsOptions;
 import io.vertx.micrometer.VertxPrometheusOptions;
 import se.kompetenser.company.MainVerticle;
 
+/**
+ * Application
+ * 
+ * @author perhjerten
+ * @since 2021-05-23
+ */
 public class Application {
 
 	public static void main(String[] args) {
