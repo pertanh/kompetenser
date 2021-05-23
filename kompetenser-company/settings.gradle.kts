@@ -1,1 +1,1 @@
-rootProject.name = "kompetenser-city"
+rootProject.name = "kompetenser-company"
