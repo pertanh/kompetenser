@@ -18,7 +18,7 @@ val vertxVersion = "4.0.3"
 val junitJupiterVersion = "5.7.0"
 
 val mainVerticleName = "se.kompetenser.city.MainVerticle"
-val launcherClassName = "io.vertx.core.Launcher"
+val launcherClassName = "se.kompetenser.Application"
 
 val watchForChange = "src/**/*"
 val doOnChange = "${projectDir}/gradlew classes"
