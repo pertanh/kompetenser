@@ -17,7 +17,7 @@ import io.vertx.junit5.VertxExtension;
 import io.vertx.junit5.VertxTestContext;
 import io.vertx.micrometer.MicrometerMetricsOptions;
 import io.vertx.micrometer.VertxPrometheusOptions;
-import se.kompetenser.city.dto.City;
+import se.kompetenser.city.dto.CityDto;
 
 @ExtendWith(VertxExtension.class)
 public class TestMainVerticle {
@@ -72,9 +72,9 @@ public class TestMainVerticle {
 	}
 
 	private JsonObject getCity(Integer id, String name) {
-		City city = new City();
-		city.setCityId(id);
-		city.setCityName(name);
+		CityDto city = new CityDto();
+		city.setId(id);
+		city.setName(name);
 		return JsonObject.mapFrom(city);
 	}
 	

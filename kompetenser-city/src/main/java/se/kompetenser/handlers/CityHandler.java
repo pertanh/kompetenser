@@ -12,7 +12,7 @@ import io.vertx.mysqlclient.MySQLPool;
 import io.vertx.sqlclient.Row;
 import io.vertx.sqlclient.RowSet;
 import io.vertx.sqlclient.SqlConnection;
-import se.kompetenser.city.dto.City;
+import se.kompetenser.city.dto.CityDto;
 
 public class CityHandler {
 	
@@ -99,9 +99,9 @@ public class CityHandler {
 	}
 	
 	private JsonObject getCity(Row row) {
-		City city = new City();
-		city.setCityId(row.getInteger(0));
-		city.setCityName(row.getString(1));
+		CityDto city = new CityDto();
+		city.setId(row.getInteger(0));
+		city.setName(row.getString(1));
 		return JsonObject.mapFrom(city);
 	}
 }
