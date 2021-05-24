@@ -12,7 +12,7 @@ import io.vertx.mysqlclient.MySQLPool;
 import io.vertx.sqlclient.Row;
 import io.vertx.sqlclient.RowSet;
 import io.vertx.sqlclient.SqlConnection;
-import se.kompetenser.competence.dto.Competence;
+import se.kompetenser.competence.dto.CompetenceDto;
 
 public class CompetenceHandler {
 	
@@ -99,9 +99,9 @@ public class CompetenceHandler {
 	}
 	
 	private JsonObject getCompetence(Row row) {
-		Competence competence = new Competence();
-		competence.setCompetenceId(row.getInteger(0));
-		competence.setCompetenceName(row.getString(1));
+		CompetenceDto competence = new CompetenceDto();
+		competence.setId(row.getInteger(0));
+		competence.setCompetence(row.getString(1));
 		competence.setCreatedBy(row.getInteger(2));
 		competence.setChangedBy(row.getInteger(3));
 		competence.setDescription(row.getString(4));

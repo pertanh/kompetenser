@@ -1,24 +1,25 @@
 package se.kompetenser.competence.dto;
 
-public class Competence {
+public class CompetenceDto {
 	
 	private Integer competenceId;
-	private String competenceName;
+	private String competence;
 	private Integer createdBy;
 	private Integer changedBy;
 	private String description;
 	private String descriptionUrl;
-	public Integer getCompetenceId() {
+
+	public Integer getId() {
 		return competenceId;
 	}
-	public void setCompetenceId(Integer competenceId) {
+	public void setId(Integer competenceId) {
 		this.competenceId = competenceId;
 	}
-	public String getCompetenceName() {
-		return competenceName;
+	public String getCompetence() {
+		return competence;
 	}
-	public void setCompetenceName(String competenceName) {
-		this.competenceName = competenceName;
+	public void setCompetence(String name) {
+		this.competence = name;
 	}
 	public Integer getCreatedBy() {
 		return createdBy;

@@ -67,8 +67,8 @@ public class MainVerticle extends AbstractVerticle {
 		/* Health checks */
 		router.route("/actuator/health*").handler(healthCheckHandlerHealth);
 		router.route("/actuator/ping*").handler(healthCheckHandlerPing);
-		router.get("/api/kompetenser/competencies").handler(competenceHandler::findAll);
-		router.get("/api/kompetenser/competencies/:name").handler(competenceHandler::findCompetence);
+		router.get("/api/kompetenser/competences").handler(competenceHandler::findAll);
+		router.get("/api/kompetenser/competences/:name").handler(competenceHandler::findCompetence);
 
 		server.requestHandler(router).listen(config.getInteger("port"), ar -> {
 			if (ar.succeeded()) {

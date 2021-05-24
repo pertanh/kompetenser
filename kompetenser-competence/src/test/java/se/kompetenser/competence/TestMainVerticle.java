@@ -18,7 +18,7 @@ import io.vertx.junit5.VertxTestContext;
 import io.vertx.micrometer.MicrometerMetricsOptions;
 import io.vertx.micrometer.VertxPrometheusOptions;
 import se.kompetenser.competence.MainVerticle;
-import se.kompetenser.competence.dto.Competence;
+import se.kompetenser.competence.dto.CompetenceDto;
 
 @ExtendWith(VertxExtension.class)
 public class TestMainVerticle {
@@ -72,9 +72,9 @@ public class TestMainVerticle {
 	}
 
 	private JsonObject getCompetence(Integer id, String name, String description, String url) {
-		Competence competence = new Competence();
-		competence.setCompetenceId(id);
-		competence.setCompetenceName(name);
+		CompetenceDto competence = new CompetenceDto();
+		competence.setId(id);
+		competence.setCompetence(name);
 		competence.setCreatedBy(1);
 		competence.setChangedBy(1);
 		competence.setDescription(description);
