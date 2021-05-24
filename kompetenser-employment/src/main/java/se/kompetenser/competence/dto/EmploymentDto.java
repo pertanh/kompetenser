@@ -1,7 +1,5 @@
 package se.kompetenser.competence.dto;
 
-import java.time.LocalDate;
-
 public class EmploymentDto {
 	
 	private String employmentDate;
