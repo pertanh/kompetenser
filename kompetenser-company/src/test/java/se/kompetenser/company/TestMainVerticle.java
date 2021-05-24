@@ -18,7 +18,6 @@ import io.vertx.junit5.VertxTestContext;
 import io.vertx.micrometer.MicrometerMetricsOptions;
 import io.vertx.micrometer.VertxPrometheusOptions;
 import se.kompetenser.company.dto.Company;
-import se.kompetenser.company.MainVerticle;
 
 @ExtendWith(VertxExtension.class)
 public class TestMainVerticle {
