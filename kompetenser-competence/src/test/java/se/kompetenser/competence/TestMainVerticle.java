@@ -17,7 +17,6 @@ import io.vertx.junit5.VertxExtension;
 import io.vertx.junit5.VertxTestContext;
 import io.vertx.micrometer.MicrometerMetricsOptions;
 import io.vertx.micrometer.VertxPrometheusOptions;
-import se.kompetenser.competence.MainVerticle;
 import se.kompetenser.competence.dto.CompetenceDto;
 
 @ExtendWith(VertxExtension.class)
