@@ -2,8 +2,6 @@ package se.kompetenser.employment;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-import java.time.LocalDate;
-
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -19,7 +17,6 @@ import io.vertx.junit5.VertxExtension;
 import io.vertx.junit5.VertxTestContext;
 import io.vertx.micrometer.MicrometerMetricsOptions;
 import io.vertx.micrometer.VertxPrometheusOptions;
-import se.kompetenser.competence.dto.EmployeeDto;
 import se.kompetenser.competence.dto.EmploymentDto;
 
 @ExtendWith(VertxExtension.class)
@@ -54,13 +51,6 @@ public class TestMainVerticle {
 		}));
 	}
 	
-	private JsonArray getEmployees() {
-		JsonArray employees = new JsonArray();
-		employees.add(this.getEmployee(Long.valueOf(1), LocalDate.of(2001, 3, 1), Long.valueOf(1), Long.valueOf(1)));
-		employees.add(this.getEmployee(Long.valueOf(2), LocalDate.of(1978, 11, 1), Long.valueOf(2), Long.valueOf(1)));
-		return employees;
-	}
-
 	private JsonArray getEmployments() {
 		JsonArray employees = new JsonArray();
 		employees.add(this.getEmployment("2001-03-01", "Putte", "Persson", "Ale"));
@@ -68,16 +58,6 @@ public class TestMainVerticle {
 		return employees;
 	}
 	
-	private JsonObject getEmployee(Long id, LocalDate date, Long userId, Long companyId) {
-		EmployeeDto emp = new EmployeeDto();
-		emp.setEmploymentId(id);
-		emp.setEmploymentDate(date);
-		emp.setEmploymentEndDate(null);
-		emp.setUserAccountId(userId);
-		emp.setCompanyId(companyId);
-		return JsonObject.mapFrom(emp);
-	}
-
 	private JsonObject getEmployment(String date, String firstName, String lastName, String city) {
 		EmploymentDto emp = new EmploymentDto();
 		emp.setEmploymentDate(date);
@@ -86,8 +66,5 @@ public class TestMainVerticle {
 		emp.setCity(city);
 		return JsonObject.mapFrom(emp);
 	}
-	
-	private JsonArray getPutte() {
-		return new JsonArray().add(this.getEmployments().getJsonObject(1));
-	}
+
 }
