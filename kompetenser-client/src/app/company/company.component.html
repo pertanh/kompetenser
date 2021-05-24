@@ -1,0 +1,26 @@
+<!-- <ion-grid> -->
+<!-- 	<ion-row> -->
+<!-- 	    <ion-col> -->
+		<div *ngIf="company" style="padding: 2em;">
+		  <p-card header="{{company.companyName}}">
+		    Organisationsnummer: <div class="ui-card-subheader">{{company.organizationNumber}}</div>
+		  </p-card>
+		  <div style="padding-bottom: .7em;"></div>
+		  
+		  <app-employment></app-employment>
+		  
+		</div>
+<!-- 		</ion-col> -->
+<!-- 	</ion-row> -->
+<!-- </ion-grid> -->
+
+<ion-card color="tertiary">
+  <ion-card-header>
+    <ion-card-subtitle>Stylivery AB</ion-card-subtitle>
+    <ion-card-title>Kompetenser</ion-card-title>
+  </ion-card-header>
+
+  <ion-card-content>
+    Lite bättre än andra bra tjänster för att hitta kompetenser inom organisationen
+  </ion-card-content>
+</ion-card>

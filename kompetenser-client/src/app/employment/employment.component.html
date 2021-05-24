@@ -1,0 +1,36 @@
+<ion-grid>
+	<ion-row>
+	    <ion-col size="8">
+			<p-panel header="Filtrera sökning" [toggleable]="true">
+				<div style="padding-bottom: .7em;"><app-city></app-city></div>
+				<div><app-competence></app-competence></div>
+			    <p-footer>
+					<ion-button color="secondary" (click)="applyFilter()">Filtrera</ion-button>
+			    </p-footer>
+			</p-panel>
+		</ion-col>
+	</ion-row>
+	
+	<ion-row>
+	    <ion-col>
+			<p-table [value]="employees">
+			    <ng-template pTemplate="header">
+			        <tr>
+			            <th>Anställd datum</th>
+					    <th>Förnamn</th>
+					    <th>Efternamn</th>
+					    <th>Ort</th>
+			        </tr>
+			    </ng-template>
+			    <ng-template pTemplate="body" let-employee>
+			        <tr>
+			            <td>{{employee.employmentDate}}</td>
+					    <td>{{employee.firstName}}</td>
+					    <td>{{employee.lastName}}</td>
+					    <td>{{employee.city}}</td>
+			        </tr>
+			    </ng-template>
+			</p-table>
+		</ion-col>
+	</ion-row>
+</ion-grid>

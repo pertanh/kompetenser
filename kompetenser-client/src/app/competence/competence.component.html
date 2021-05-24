@@ -1,0 +1,10 @@
+<div class="content-section implementation">
+	<span class="ui-fluid">
+		<p-autoComplete [(ngModel)]="competences" [suggestions]="filteredCompetences" (completeMethod)="getCompetences($event)" styleClass="wid100"
+		            [minLength]="2" placeholder="Kompetenser" field="competence" [multiple]="true" [dropdown]="true">
+			<ng-template let-value pTemplate="selectedItem">
+		        <span style="font-size:14px">{{value.competence}}</span>
+		    </ng-template>
+		</p-autoComplete>
+	</span>
+</div>
